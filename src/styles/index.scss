@@ -1,1 +1,235 @@
-@import "../bootstrap/scss/bootstrap"
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600;700&display=swap");
+
+$primary-color: #130f49;
+$secondary-color: #55527c;
+$accent-color: #34a1cd;
+$subtitle-color: #b4b2c5;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+}
+
+header,
+section {
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: $primary-color;
+  span {
+    color: $accent-color;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  color: $subtitle-color;
+}
+
+h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: $primary-color;
+}
+
+p {
+  font-size: 1.8rem;
+  color: $subtitle-color;
+}
+
+.background__container {
+  padding: 0 0;
+  background-image: url("../assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  background-position-y: -10px;
+  header h1 {
+    font-size: 5.8rem;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active {
+  padding: 19px 32px;
+  border-radius: 12px;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.profile-picture__container {
+  padding: 46px 16px 0 16px;
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.my-skills__section {
+  padding-top: 46px;
+  text-align: center;
+  h1 {
+    margin-bottom: 36px;
+  }
+  .my-skill__card {
+    text-align: left;
+    margin-bottom: 36px;
+    .my-skill__title {
+      margin-bottom: 24px;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        .fa-codepen {
+          font-size: 3rem;
+          color: #58cfff;
+        }
+        .fa-layer-group {
+          font-size: 3rem;
+          color: #f66565;
+        }
+        .fa-fill-drip {
+          font-size: 3rem;
+          color: #ffc261;
+        }
+        .fa-terminal {
+          font-size: 3rem;
+          color: #665aff;
+        }
+      }
+      .codepen-icon__container {
+        background-color: #e9f9ff;
+      }
+
+      .layer-icon__container {
+        background-color: #fff5f6;
+      }
+
+      .drip-icon__container {
+        background-color: #fff4e4;
+      }
+
+      .terminal-icon__container {
+        background-color: #f4f3ff;
+      }
+    }
+  }
+}
+
+.card {
+  margin-top: 24px;
+  border: none;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 450px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  @media (max-width: 768px) {
+    min-height: 350px;
+  }
+
+  @media (max-width: 420px) {
+    min-height: 300px;
+  }
+
+  &.card-has-bg {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      transform: scale(0.98);
+      box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+      background-size: 130%;
+      transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+
+      .card-img-overlay {
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        background: rgb(35, 79, 109);
+        background: linear-gradient(
+          0deg,
+          rgba(4, 69, 114, 0.5) 0%,
+          rgba(4, 69, 114, 1) 100%
+        );
+      }
+    }
+  }
+  .card-footer {
+    background: none;
+    border-top: none;
+    .media {
+      img {
+        width: 50px;
+        height: 50px;
+        border: solid 3px $primary-color;
+        background-color: white;
+      }
+    }
+  }
+  .card-meta {
+    color: orange;
+  }
+  .card-body {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &:hover {
+    .card-body {
+      margin-top: 30px;
+      transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .card-img-overlay {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background: rgb(35, 79, 109);
+    background: linear-gradient(
+      0deg,
+      rgba(35, 79, 109, 0.3785889355742297) 0%,
+      rgba(69, 95, 113, 1) 100%
+    );
+  }
+}
+
+.rest-countries-card {
+  background-image: url("../assets/images/project-1.jpg");
+}
+
+.petgram-card {
+  background-image: url("../assets/images/project-2.png");
+}
+
+.js-media-player-card {
+  background-image: url("../assets/images/project-3.png");
+}
+
+.clipboard-card {
+  background-image: url("../assets/images/project-4.jpg");
+}
+
+.batatabit-card {
+  background-image: url("../assets/images/project-5.png");
+}

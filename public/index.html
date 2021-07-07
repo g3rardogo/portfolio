@@ -7,7 +7,211 @@
     <title>Gerardo Ramirez - Portfolio</title>
   </head>
   <body>
+    <div class="background__container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <header>
+        <h1>Hey, I'm a <span>frontend</span> developer.</h1>
+        <p>
+          Hi, I'm Gerardo a frontend developer from Barcelona. I help brands
+          turn their ideas into high quality products.
+        </p>
+        <a
+          href="#"
+          class="btn btn-primary btn-lg active"
+          role="button"
+          aria-pressed="true"
+          >Contact me</a
+        >
+      </header>
+      <div class="profile-picture__container">
+        <img
+          src="../src/assets/images/profile-picture.jpg"
+          alt="Profile picture"
+        />
+      </div>
+    </div>
+    <section class="my-skills__section">
+      <h2>MY SKILLS</h2>
+      <h1>My Expertise</h1>
+      <div class="my-skills__container">
+        <div class="my-skill__card">
+          <div class="my-skill__title">
+            <div class="icon codepen-icon__container"><i class="fab fa-codepen"></i></div>
+            <h3>Strategy & Direction</h3>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eos
+            doloremque velit quibusdam nostrum, quisquam molestiae ad molestias
+            ipsa recusandae doloribus aut atque iusto?
+          </p>
+        </div>
+        <div class="my-skill__card">
+          <div class="my-skill__title">
+            <div class="icon layer-icon__container"><i class="fas fa-layer-group"></i></i></div>
+            <h3>Motion & Animation</h3>
+          </div>
+          <p>
+            Communicate to all. Occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+            unde omnis iste natus error sit
+          </p>
+        </div>
+        <div class="my-skill__card">
+          <div class="my-skill__title">
+            <div class="icon drip-icon__container"><i class="fas fa-fill-drip"></i></div>
+            <h3>Branding & Logo</h3>
+          </div>
+          <p>
+            Position the Brand. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse dicta sunt explicabo. Nemo enim ipsam
+            voluptatem quia voluptas.
+          </p>
+        </div>
+        <div class="my-skill__card">
+          <div class="my-skill__title">
+            <div class="icon terminal-icon__container"><i class="fas fa-terminal"></i></div>
+            <h3>Development</h3>
+          </div>
+          <p>
+            Bringing work to life. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="my-work__section">
+      <h2>PORTFOLIO</h2>
+      <h1>All Creative Works</h1>
+      <p>Discover all projects on Github <i class="fas fa-arrow-right"></i></p>
+      <div>
+        <div class="card text-white card-has-bg click-col rest-countries-card">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <p class="mb-2">REST Countries API</p>
+              <h4 class="card-title mt-0 "><a class="text-white" href="#">With color theme switcher</a></h4>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-react.jpg" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-js.png" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-scss.jpg" alt="Generic placeholder image">
+                <a href="https://github.com/g3rardogo/rest-countries">
+                  <img class="mr-3 rounded-circle" src="../src/assets/images/logo-github.png" alt="Generic placeholder image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card text-white card-has-bg click-col petgram-card">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <p class="mb-2">Petgram</p>
+              <h4 class="card-title mt-0 "><a class="text-white" href="#">Instagram for pets</a></h4>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-react.jpg" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-js.png" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-styled-components.png" alt="Generic placeholder image">
+                <a href="https://github.com/g3rardogo/petgram">
+                  <img class="mr-3 rounded-circle" src="../src/assets/images/logo-github.png" alt="Generic placeholder image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card text-white card-has-bg click-col js-media-player-card">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <p class="mb-2">JS Media Player</p>
+              <h4 class="card-title mt-0 "><a class="text-white" href="#">Vanilla JavaScript media player</a></h4>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-html.png" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-js.png" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-scss.jpg" alt="Generic placeholder image">
+                <a href="https://github.com/g3rardogo/js-mediaplayer">
+                  <img class="mr-3 rounded-circle" src="../src/assets/images/logo-github.png" alt="Generic placeholder image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card text-white card-has-bg click-col clipboard-card">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <p class="mb-2">Clipboard Landing Page</p>
+              <h4 class="card-title mt-0 "><a class="text-white" href="#">Landing page of a Clipboard App for iOS and Mac.</a></h4>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-html.png" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-pug.png" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-scss.jpg" alt="Generic placeholder image">
+                <a href="https://github.com/g3rardogo/clipboard-landing-page">
+                  <img class="mr-3 rounded-circle" src="../src/assets/images/logo-github.png" alt="Generic placeholder image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card text-white card-has-bg click-col batatabit-card">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <p class="mb-2">Batatabit</p>
+              <h4 class="card-title mt-0 "><a class="text-white" href="#">Html and CSS fully responsive page applying mobile first.</a></h4>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-html.png" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" src="../src/assets/images/logo-css.png" alt="Generic placeholder image">
+                <a href="https://github.com/g3rardogo/Batatabit">
+                  <img class="mr-3 rounded-circle" src="../src/assets/images/logo-github.png" alt="Generic placeholder image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="../src/bootstrap/js/jquery-1.9.1.min.js"></script>
     <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3e2facfa76.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
