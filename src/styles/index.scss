@@ -43,6 +43,11 @@ p {
   color: $subtitle-color;
 }
 
+a {
+  font-size: 1.8rem;
+  color: $primary-color;
+}
+
 .background__container {
   padding: 0 0;
   background-image: url("../assets/images/background.svg");
@@ -125,6 +130,9 @@ p {
   }
 }
 
+.my-work__section {
+  padding-top: 46px;
+}
 .card {
   margin-top: 24px;
   border: none;
@@ -232,4 +240,126 @@ p {
 
 .batatabit-card {
   background-image: url("../assets/images/project-5.png");
+}
+
+.about__section {
+  padding-top: 46px;
+}
+.profile-card {
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  height: 368px;
+  border: none;
+  .background-block {
+    float: left;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    .background {
+      width: 100%;
+      vertical-align: top;
+      opacity: 0.9;
+      -webkit-filter: blur(0.5px);
+      filter: blur(0.5px);
+      -webkit-transform: scale(1.8);
+      transform: scale(2.8);
+    }
+  }
+  .card-content {
+    width: 100%;
+    padding: 15px 25px;
+    color: #232323;
+    float: left;
+    background: #efefef;
+    height: 50%;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    z-index: 1;
+  }
+  .card-content::before {
+    content: "";
+    background: #efefef;
+    width: 120%;
+    height: 100%;
+    left: 11px;
+    bottom: 51px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-13deg);
+  }
+  .profile {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    max-width: 100px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    z-index: 2;
+  }
+  h2 {
+    margin: 0 0 5px;
+    font-weight: 600;
+    font-size: 2.5rem;
+    small {
+      display: block;
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+  }
+  .icon-block {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    a {
+      text-decoration: none;
+    }
+  }
+  i {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: $primary-color;
+    text-align: center;
+    border: 1px solid $primary-color;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  i:hover {
+    background-color: $primary-color;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+footer {
+  margin-top: 64px;
+  background-color: #e9f9ff;
+  .container {
+    padding: 88px 16px;
+    text-align: center;
+    h1 {
+      font-size: 3.8rem;
+    }
+    h2 {
+      margin-bottom: 12px;
+      font-size: 1.6rem;
+    }
+    i {
+      display: block;
+      margin-top: 24px;
+      font-size: 4rem;
+      color: #f66565;
+    }
+    a {
+      display: block;
+      margin-top: 24px;
+      font-weight: 600;
+    }
+  }
 }
