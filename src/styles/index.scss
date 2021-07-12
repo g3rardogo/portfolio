@@ -76,16 +76,21 @@ a {
 }
 
 .my-skills__section {
-  padding-top: 46px;
+  padding-top: 86px;
   text-align: center;
   h1 {
     margin-bottom: 36px;
   }
-  .my-skill__card {
-    text-align: left;
-    margin-bottom: 36px;
-    .my-skill__title {
-      margin-bottom: 24px;
+  .my-skills__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .my-skill__card {
+      text-align: left;
+      margin: 0 12px 36px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .icon {
         display: flex;
         align-items: center;
@@ -94,44 +99,51 @@ a {
         height: 70px;
         margin-bottom: 16px;
         border-radius: 20px;
-        .fa-codepen {
-          font-size: 3rem;
-          color: #58cfff;
-        }
-        .fa-layer-group {
-          font-size: 3rem;
-          color: #f66565;
-        }
-        .fa-fill-drip {
-          font-size: 3rem;
-          color: #ffc261;
-        }
-        .fa-terminal {
-          font-size: 3rem;
-          color: #665aff;
+        img {
+          width: 50%;
         }
       }
-      .codepen-icon__container {
-        background-color: #e9f9ff;
+      .html-icon {
+        background-color: #ebc0c0;
       }
 
-      .layer-icon__container {
-        background-color: #fff5f6;
+      .css-icon {
+        background-color: #d3f1fd;
       }
 
-      .drip-icon__container {
-        background-color: #fff4e4;
+      .js-icon {
+        background-color: #f8f7be;
       }
 
-      .terminal-icon__container {
-        background-color: #f4f3ff;
+      .react-icon {
+        background-color: #d3f1fd;
+      }
+
+      .sass-icon {
+        background-color: #f4ddf8;
+      }
+
+      .bootstrap-icon {
+        background-color: #e9d0fd;
+      }
+
+      .webpack-icon {
+        background-color: #d3f1fd;
+      }
+
+      .git-icon {
+        background-color: #ffc8c0;
+      }
+
+      .npm-icon {
+        background-color: #ff08005e;
       }
     }
   }
 }
 
 .my-work__section {
-  padding-top: 46px;
+  padding-top: 86px;
 }
 .card {
   margin-top: 24px;
@@ -243,7 +255,7 @@ a {
 }
 
 .about__section {
-  padding-top: 46px;
+  padding-top: 86px;
 }
 .profile-card {
   overflow: hidden;
@@ -335,6 +347,10 @@ a {
     color: #fff;
     text-decoration: none;
   }
+}
+
+.contact__section {
+  padding-top: 86px;
 }
 
 footer {
