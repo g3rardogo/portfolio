@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="background__container">
-      <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <button
           class="navbar-toggler"
           type="button"
@@ -23,31 +23,31 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Works</a>
+              <a class="nav-link" href="#works">Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </nav>
-      <header>
+      <header id="home">
         <h1>Hey, I'm a <span>frontend</span> developer.</h1>
         <p>
           Hi, I'm Gerardo a frontend developer from Barcelona. I help brands
           turn their ideas into high quality products.
         </p>
         <a
-          href="#"
+          href="#contact"
           class="btn btn-primary btn-lg active"
           role="button"
           aria-pressed="true"
@@ -61,7 +61,7 @@
         />
       </div>
     </div>
-    <section class="my-skills__section">
+    <section class="my-skills__section" id="skills">
       <h2>MY SKILLS</h2>
       <h1>My Expertise</h1>
       <div class="my-skills__container">
@@ -125,201 +125,232 @@
         </div>
       </div>
     </section>
-    <section class="my-work__section">
-      <h2>PORTFOLIO</h2>
-      <h1>All Creative Works</h1>
+    <div class="background__container--square">
+      <section class="my-work__section" id="works">
+        <h2>PORTFOLIO</h2>
+        <h1>All Creative Works</h1>
 
-      <p>
-        Discover all projects on
-        <a href="https://github.com/g3rardogo"
-          >Github <i class="fas fa-arrow-right"></i
-        ></a>
-      </p>
-      <div>
-        <div class="card text-white card-has-bg click-col rest-countries-card">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <p class="mb-2">REST Countries API</p>
-              <h4 class="card-title mt-0">
-                <a class="text-white" href="#">With color theme switcher</a>
-              </h4>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-react.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-js.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-sass.png"
-                  alt="Generic placeholder image"
-                />
+        <p>
+          Discover all projects on
+          <a href="https://github.com/g3rardogo"
+            >Github <i class="fas fa-arrow-right"></i
+          ></a>
+        </p>
+        <div>
+          <div
+            class="card text-white card-has-bg click-col rest-countries-card"
+          >
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
                 <a href="https://github.com/g3rardogo/rest-countries">
+                  <p class="mb-2">REST Countries API</p>
+                </a>
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/rest-countries"
+                    >With color theme switcher</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
                   <img
                     class="mr-3 rounded-circle"
-                    src="../src/assets/images/logo-github.png"
+                    src="../src/assets/images/logo-react.png"
                     alt="Generic placeholder image"
                   />
-                </a>
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-js.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-sass.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/rest-countries">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card text-white card-has-bg click-col petgram-card">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <p class="mb-2">Petgram</p>
-              <h4 class="card-title mt-0">
-                <a class="text-white" href="#">Instagram for pets</a>
-              </h4>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-react.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-js.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-styled-components.png"
-                  alt="Generic placeholder image"
-                />
-                <a href="https://github.com/g3rardogo/petgram">
-                  <img
-                    class="mr-3 rounded-circle"
-                    src="../src/assets/images/logo-github.png"
-                    alt="Generic placeholder image"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card text-white card-has-bg click-col js-media-player-card">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <p class="mb-2">JS Media Player</p>
-              <h4 class="card-title mt-0">
-                <a class="text-white" href="#"
-                  >Vanilla JavaScript media player</a
+          <div class="card text-white card-has-bg click-col petgram-card">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/petgram"
+                  ><p class="mb-2">Petgram</p></a
                 >
-              </h4>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-html.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-js.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-sass.png"
-                  alt="Generic placeholder image"
-                />
-                <a href="https://github.com/g3rardogo/js-mediaplayer">
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/petgram"
+                    >Instagram for pets</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
                   <img
                     class="mr-3 rounded-circle"
-                    src="../src/assets/images/logo-github.png"
+                    src="../src/assets/images/logo-react.png"
                     alt="Generic placeholder image"
                   />
-                </a>
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-js.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-styled-components.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/petgram">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card text-white card-has-bg click-col clipboard-card">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <p class="mb-2">Clipboard Landing Page</p>
-              <h4 class="card-title mt-0">
-                <a class="text-white" href="#"
-                  >Landing page of a Clipboard App for iOS and Mac.</a
+          <div
+            class="card text-white card-has-bg click-col js-media-player-card"
+          >
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/js-mediaplayer"
+                  ><p class="mb-2">JS Media Player</p></a
                 >
-              </h4>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-html.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-pug.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-sass.png"
-                  alt="Generic placeholder image"
-                />
-                <a href="https://github.com/g3rardogo/clipboard-landing-page">
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/js-mediaplayer"
+                    >Vanilla JavaScript media player</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
                   <img
                     class="mr-3 rounded-circle"
-                    src="../src/assets/images/logo-github.png"
+                    src="../src/assets/images/logo-html.png"
                     alt="Generic placeholder image"
                   />
-                </a>
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-js.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-sass.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/js-mediaplayer">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card text-white card-has-bg click-col batatabit-card">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <p class="mb-2">Batatabit</p>
-              <h4 class="card-title mt-0">
-                <a class="text-white" href="#"
-                  >Html and CSS fully responsive page applying mobile first.</a
+          <div class="card text-white card-has-bg click-col clipboard-card">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/clipboard-landing-page"
+                  ><p class="mb-2">Clipboard Landing Page</p></a
                 >
-              </h4>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-html.png"
-                  alt="Generic placeholder image"
-                />
-                <img
-                  class="mr-3 rounded-circle"
-                  src="../src/assets/images/logo-css.png"
-                  alt="Generic placeholder image"
-                />
-                <a href="https://github.com/g3rardogo/Batatabit">
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/clipboard-landing-page"
+                    >Landing page of a Clipboard App for iOS and Mac.</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
                   <img
                     class="mr-3 rounded-circle"
-                    src="../src/assets/images/logo-github.png"
+                    src="../src/assets/images/logo-html.png"
                     alt="Generic placeholder image"
                   />
-                </a>
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-pug.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-sass.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/clipboard-landing-page">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card text-white card-has-bg click-col batatabit-card">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/Batatabit"
+                  ><p class="mb-2">Batatabit</p></a
+                >
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/Batatabit"
+                    >Html and CSS fully responsive page applying mobile
+                    first.</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-html.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-css.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/Batatabit">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="about__section">
+      </section>
+    </div>
+    <section class="about__section" id="about">
       <h2>NICE TO MEET YOU.</h2>
       <h1>Hey, I'm Gerardo, frontend developer and code lover</h1>
       <p>
@@ -333,7 +364,7 @@
         non harum dicta eaque et repudiandae enim? Aperiam fuga ut provident.
       </p>
     </section>
-    <section class="contact__section">
+    <section class="contact__section" id="contact">
       <h1>Contact Me</h1>
       <div class="card profile-card">
         <div class="background-block">
@@ -353,10 +384,19 @@
         <div class="card-content">
           <h2>Gerardo Ramirez<small>Frontend Developer</small></h2>
           <div class="icon-block">
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/g3rardogo"
+              ><i class="fa fa-github"></i
+            ></a>
+            <a href="https://twitter.com/g3rardogo"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/gerardo-javier-ramírez-gómez-aa06b2192"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a href="mailto:gerardogo145@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -365,12 +405,14 @@
       <div class="container">
         <h2>CONTACT ME</h2>
         <h1>Got a Project? Lets Talk!</h1>
-        <i class="fas fa-envelope-open-text"></i>
-        <a href="">Home</a>
-        <a href="">Skills</a>
-        <a href="">Works</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
+        <a href="mailto:gerardogo145@gmail.com">
+          <i class="fas fa-envelope-open-text"></i>
+        </a>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#works">Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
     </footer>
     <script src="../src/bootstrap/js/jquery-1.9.1.min.js"></script>

@@ -48,6 +48,11 @@ a {
   color: $primary-color;
 }
 
+a:hover {
+  color: $primary-color;
+  text-decoration: none;
+}
+
 .background__container {
   padding: 0 0;
   background-image: url("../assets/images/background.svg");
@@ -142,9 +147,18 @@ a {
   }
 }
 
-.my-work__section {
-  padding-top: 86px;
+.background__container--square {
+  padding: 0 0;
+  background-image: url("../assets/images/background-2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: -25vw;
+  background-position-y: 30px;
+  .my-work__section {
+    padding-top: 86px;
+  }
 }
+
 .card {
   margin-top: 24px;
   border: none;
@@ -255,7 +269,10 @@ a {
 }
 
 .about__section {
-  padding-top: 86px;
+  margin-top: 86px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: #f8f8ff;
 }
 .profile-card {
   overflow: hidden;
@@ -351,10 +368,11 @@ a {
 
 .contact__section {
   padding-top: 86px;
+  padding-bottom: 86px;
 }
 
 footer {
-  margin-top: 64px;
+  margin-top: 86px;
   background-color: #e9f9ff;
   .container {
     padding: 88px 16px;
