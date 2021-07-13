@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600;700&display=swap");
+@import "../bootstrap/scss/breakpoints.scss";
 
 $primary-color: #130f49;
 $secondary-color: #55527c;
 $accent-color: #34a1cd;
 $subtitle-color: #b4b2c5;
+
+$padding-default: 16px;
+$padding-tablet: 24px;
+$padding-desktop-m: 10%;
+$padding-desktop-xl: 20%;
 
 html {
   font-size: 62.5%;
@@ -13,17 +19,15 @@ body {
   font-family: "Catamaran", sans-serif;
 }
 
-header,
-section {
-  padding: 0 16px;
-}
-
 h1 {
   font-size: 4.8rem;
   font-weight: 700;
   color: $primary-color;
   span {
     color: $accent-color;
+  }
+  @include media(tablet) {
+    font-size: 6.4rem;
   }
 }
 
@@ -53,18 +57,6 @@ a:hover {
   text-decoration: none;
 }
 
-.background__container {
-  padding: 0 0;
-  background-image: url("../assets/images/background.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-  background-position-y: -10px;
-  header h1 {
-    font-size: 5.8rem;
-  }
-}
-
 .btn-primary:not(:disabled):not(.disabled).active {
   padding: 19px 32px;
   border-radius: 12px;
@@ -72,26 +64,96 @@ a:hover {
   border-color: $primary-color;
 }
 
-.profile-picture__container {
-  padding: 46px 16px 0 16px;
-  img {
-    width: 100%;
-    border-radius: 50%;
+.background__container {
+  padding: 0 0;
+  background-image: url("../assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-size: 320px;
+  background-position: right;
+  background-position-y: -10px;
+  .navbar {
+    padding: 12px $padding-default;
+    @include media(desktop-m) {
+      padding: 24px $padding-desktop-m 0;
+    }
+    @include media(desktop-xl) {
+      padding: 24px $padding-desktop-xl 0;
+    }
+    a {
+      @include media(desktop-s) {
+        margin-right: 24px;
+      }
+    }
+  }
+  .header-grid {
+    @include media(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(desktop-m) {
+      padding: 0 $padding-desktop-m;
+    }
+    @include media(desktop-xl) {
+      padding: 0px $padding-desktop-xl;
+    }
+    header {
+      padding: 52px $padding-default 0;
+      max-width: 630px;
+      p {
+        @include media(desktop-s) {
+          margin-top: 24px;
+        }
+      }
+      a {
+        @include media(desktop-s) {
+          margin-top: 32px;
+        }
+      }
+      h1 {
+        font-size: 5.8rem;
+        @include media(tablet) {
+          font-size: 7rem;
+        }
+      }
+      p {
+        color: $primary-color;
+      }
+    }
+    .profile-picture__container {
+      max-width: 464px;
+      padding: 46px $padding-default 0;
+      @include media(desktop-m) {
+        max-width: 500px;
+        display: flex;
+        justify-self: right;
+      }
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
   }
 }
 
 .my-skills__section {
-  padding-top: 86px;
+  padding: 86px $padding-default 0;
   text-align: center;
+  @include media(desktop-m) {
+    padding: 120px $padding-desktop-m 0;
+  }
+  @include media(desktop-xl) {
+    padding: 120px $padding-desktop-xl 0;
+  }
   h1 {
-    margin-bottom: 36px;
+    margin-bottom: 54px;
   }
   .my-skills__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include media(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
     .my-skill__card {
-      text-align: left;
       margin: 0 12px 36px 12px;
       display: flex;
       flex-direction: column;
@@ -104,6 +166,10 @@ a:hover {
         height: 70px;
         margin-bottom: 16px;
         border-radius: 20px;
+        @include media(desktop-s) {
+          width: 100px;
+          height: 100px;
+        }
         img {
           width: 50%;
         }
@@ -148,31 +214,50 @@ a:hover {
 }
 
 .background__container--square {
-  padding: 0 0;
+  padding: 0 0 42px 0;
   background-image: url("../assets/images/background-2.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
   background-position-x: -25vw;
-  background-position-y: 30px;
+  background-position-y: 70px;
+  @include media(tablet) {
+    background-position-y: 40px;
+  }
   .my-work__section {
-    padding-top: 86px;
+    padding: 86px $padding-default 0;
+    @include media(desktop-m) {
+      padding: 86px $padding-desktop-m 0;
+    }
+    @include media(desktop-xl) {
+      padding: 86px $padding-desktop-xl 0;
+    }
+  }
+  .works__container {
+    @media (min-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include media(desktop-s) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
 .card {
+  min-height: 340px;
   margin-top: 24px;
   border: none;
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   overflow: hidden;
   border-radius: 20px;
-  min-height: 450px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  @media (max-width: 768px) {
-    min-height: 350px;
+  @media (min-width: 480px) {
+    min-height: 400px;
   }
 
-  @media (max-width: 420px) {
-    min-height: 300px;
+  @media (min-width: 600px) {
+    min-height: 325px;
   }
 
   &.card-has-bg {
@@ -268,114 +353,150 @@ a:hover {
   background-image: url("../assets/images/project-5.png");
 }
 
-.about__section {
-  margin-top: 86px;
-  padding-top: 64px;
-  padding-bottom: 64px;
-  background-color: #f8f8ff;
-}
-.profile-card {
-  overflow: hidden;
-  width: 100%;
-  text-align: center;
-  height: 368px;
-  border: none;
-  .background-block {
-    float: left;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    .background {
-      width: 100%;
-      vertical-align: top;
-      opacity: 0.9;
-      -webkit-filter: blur(0.5px);
-      filter: blur(0.5px);
-      -webkit-transform: scale(1.8);
-      transform: scale(2.8);
+.about-grid {
+  padding: 0 $padding-default;
+  @include media(tablet) {
+    padding: 0 $padding-tablet;
+  }
+  @include media(desktop-s) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(desktop-m) {
+    padding: 0 $padding-desktop-m;
+  }
+  @include media(desktop-xl) {
+    padding: 0 $padding-desktop-xl;
+  }
+  .about__section {
+    margin-top: 86px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include media(desktop-s) {
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    @include media(desktop-m) {
+      padding: 86px 0;
+    }
+    @include media(desktop-xl) {
+      padding: 86px 0;
     }
   }
-  .card-content {
-    width: 100%;
-    padding: 15px 25px;
-    color: #232323;
-    float: left;
-    background: #efefef;
-    height: 50%;
-    border-radius: 0 0 5px 5px;
-    position: relative;
-    z-index: 1;
-  }
-  .card-content::before {
-    content: "";
-    background: #efefef;
-    width: 120%;
-    height: 100%;
-    left: 11px;
-    bottom: 51px;
-    position: absolute;
-    z-index: -1;
-    transform: rotate(-13deg);
-  }
-  .profile {
-    border-radius: 50%;
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    max-width: 100px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 1);
-    -webkit-transform: translate(-50%, 0%);
-    transform: translate(-50%, 0%);
-    z-index: 2;
-  }
-  h2 {
-    margin: 0 0 5px;
-    font-weight: 600;
-    font-size: 2.5rem;
-    small {
-      display: block;
-      font-size: 1.5rem;
-      margin-top: 10px;
-    }
-  }
-  .icon-block {
-    float: left;
-    width: 100%;
-    margin-top: 15px;
-    a {
-      text-decoration: none;
-    }
-  }
-  i {
-    display: inline-block;
-    font-size: 1.6rem;
-    color: $primary-color;
+  .contact__section {
+    padding-top: 86px;
+    padding-bottom: 86px;
     text-align: center;
-    border: 1px solid $primary-color;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    margin: 0 5px;
+    @include media(desktop-s) {
+      margin-top: 86px;
+      padding-top: 64px;
+      text-align: right;
+    }
+    .profile-card {
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      height: 400px;
+      overflow: hidden;
+      margin: 46px auto 0;
+      text-align: center;
+      border: none;
+      @include media(desktop-s) {
+        margin: 46px 0 0 auto;
+      }
+      .background-block {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        float: left;
+        .background {
+          width: 100%;
+          vertical-align: top;
+          opacity: 0.9;
+          -webkit-filter: blur(0.5px);
+          filter: blur(0.5px);
+          -webkit-transform: scale(1.8);
+          transform: scale(2.8);
+        }
+      }
+      .card-content {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        padding: 15px 25px;
+        float: left;
+        color: #232323;
+        background: #efefef;
+        border-radius: 0 0 5px 5px;
+        z-index: 1;
+      }
+      .card-content::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        left: 11px;
+        bottom: 51px;
+        background: #efefef;
+        transform: rotate(-13deg);
+        z-index: -1;
+      }
+      .profile {
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        max-width: 100px;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 1);
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+        z-index: 2;
+      }
+      h2 {
+        margin: 14px 0 5px 0;
+        font-weight: 600;
+        font-size: 2.5rem;
+        small {
+          display: block;
+          font-size: 1.5rem;
+          margin-top: 10px;
+        }
+      }
+      .icon-block {
+        float: left;
+        width: 100%;
+        margin-top: 24px;
+        a {
+          text-decoration: none;
+        }
+      }
+      i {
+        display: inline-block;
+        font-size: 1.6rem;
+        color: $primary-color;
+        text-align: center;
+        border: 1px solid $primary-color;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        margin: 0 5px;
+      }
+      i:hover {
+        background-color: $primary-color;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
   }
-  i:hover {
-    background-color: $primary-color;
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
-.contact__section {
-  padding-top: 86px;
-  padding-bottom: 86px;
 }
 
 footer {
   margin-top: 86px;
   background-color: #e9f9ff;
   .container {
-    padding: 88px 16px;
+    padding: 88px $padding-default 0;
     text-align: center;
     h1 {
       font-size: 3.8rem;
@@ -394,6 +515,12 @@ footer {
       display: block;
       margin-top: 24px;
       font-weight: 600;
+    }
+    a:not(:nth-child(3)) {
+      @include media(tablet) {
+        display: inline-block;
+        margin: 42px $padding-tablet;
+      }
     }
   }
 }

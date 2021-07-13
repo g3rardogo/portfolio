@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gerardo Ramirez - Portfolio</title>
+    <title>Gerardo Ramírez - Portfolio</title>
   </head>
   <body>
     <div class="background__container">
@@ -40,25 +40,27 @@
           </ul>
         </div>
       </nav>
-      <header id="home">
-        <h1>Hey, I'm a <span>frontend</span> developer.</h1>
-        <p>
-          Hi, I'm Gerardo a frontend developer from Barcelona. I help brands
-          turn their ideas into high quality products.
-        </p>
-        <a
-          href="#contact"
-          class="btn btn-primary btn-lg active"
-          role="button"
-          aria-pressed="true"
-          >Contact me
-        </a>
-      </header>
-      <div class="profile-picture__container">
-        <img
-          src="../src/assets/images/profile-picture.jpg"
-          alt="Profile picture"
-        />
+      <div class="header-grid">
+        <header id="home">
+          <h1>Hey, I'm a <span>frontend</span> developer.</h1>
+          <p>
+            Hi, I'm Gerardo a frontend developer from Barcelona. I help brands
+            turn their ideas into high quality products.
+          </p>
+          <a
+            href="#contact"
+            class="btn btn-primary btn-lg active"
+            role="button"
+            aria-pressed="true"
+            >Contact me
+          </a>
+        </header>
+        <div class="profile-picture__container">
+          <img
+            src="../src/assets/images/profile-picture.jpg"
+            alt="Profile picture"
+          />
+        </div>
       </div>
     </div>
     <section class="my-skills__section" id="skills">
@@ -116,12 +118,32 @@
           </div>
           <p>Bootstrap</p>
         </div>
-
         <div class="my-skill__card">
           <div class="icon webpack-icon">
             <img src="../src/assets/images/logo-webpack.png" alt="Logo React" />
           </div>
           <p>Webpack</p>
+        </div>
+        <div class="my-skill__card">
+          <div class="icon webpack-icon">
+            <img
+              src="../src/assets/images/logo-tailwind.png"
+              alt="Logo React"
+            />
+          </div>
+          <p>Tailwind CSS</p>
+        </div>
+        <div class="my-skill__card">
+          <div class="icon webpack-icon">
+            <img src="../src/assets/images/logo-vscode.png" alt="Logo React" />
+          </div>
+          <p>Visual Studio Code</p>
+        </div>
+        <div class="my-skill__card">
+          <div class="icon webpack-icon">
+            <img src="../src/assets/images/logo-jquery.png" alt="Logo React" />
+          </div>
+          <p>JQuery</p>
         </div>
       </div>
     </section>
@@ -129,14 +151,13 @@
       <section class="my-work__section" id="works">
         <h2>PORTFOLIO</h2>
         <h1>All Creative Works</h1>
-
         <p>
           Discover all projects on
           <a href="https://github.com/g3rardogo"
             >Github <i class="fas fa-arrow-right"></i
           ></a>
         </p>
-        <div>
+        <div class="works__container">
           <div
             class="card text-white card-has-bg click-col rest-countries-card"
           >
@@ -347,60 +368,216 @@
               </div>
             </div>
           </div>
+          <div class="card text-white card-has-bg click-col batatabit-card">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/Batatabit"
+                  ><p class="mb-2">Batatabit</p></a
+                >
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/Batatabit"
+                    >Html and CSS fully responsive page applying mobile
+                    first.</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-html.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-css.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/Batatabit">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card text-white card-has-bg click-col batatabit-card">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/Batatabit"
+                  ><p class="mb-2">Batatabit</p></a
+                >
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/Batatabit"
+                    >Html and CSS fully responsive page applying mobile
+                    first.</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-html.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-css.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/Batatabit">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card text-white card-has-bg click-col batatabit-card">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/Batatabit"
+                  ><p class="mb-2">Batatabit</p></a
+                >
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/Batatabit"
+                    >Html and CSS fully responsive page applying mobile
+                    first.</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-html.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-css.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/Batatabit">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card text-white card-has-bg click-col batatabit-card">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <a href="https://github.com/g3rardogo/Batatabit"
+                  ><p class="mb-2">Batatabit</p></a
+                >
+                <h4 class="card-title mt-0">
+                  <a
+                    class="text-white"
+                    href="https://github.com/g3rardogo/Batatabit"
+                    >Html and CSS fully responsive page applying mobile
+                    first.</a
+                  >
+                </h4>
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-html.png"
+                    alt="Generic placeholder image"
+                  />
+                  <img
+                    class="mr-3 rounded-circle"
+                    src="../src/assets/images/logo-css.png"
+                    alt="Generic placeholder image"
+                  />
+                  <a href="https://github.com/g3rardogo/Batatabit">
+                    <img
+                      class="mr-3 rounded-circle"
+                      src="../src/assets/images/logo-github.png"
+                      alt="Generic placeholder image"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
-    <section class="about__section" id="about">
-      <h2>NICE TO MEET YOU.</h2>
-      <h1>Hey, I'm Gerardo, frontend developer and code lover</h1>
-      <p>
-        Hi, my name is Gerardo Ramirez and I'm a frontend developer from
-        Barcelona. I have over 5 years experience in software development. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Odit, maiores facere
-        temporibus quam pariatur sunt dolor quis explicabo amet ipsam fugiat
-        labore et obcaecati similique accusantium nam suscipit minus laborum.
-        Illo a corrupti quidem porro odio, facilis atque esse, molestias, eos
-        debitis doloremque inventore vero perspiciatis nisi quisquam laboriosam
-        non harum dicta eaque et repudiandae enim? Aperiam fuga ut provident.
-      </p>
-    </section>
-    <section class="contact__section" id="contact">
-      <h1>Contact Me</h1>
-      <div class="card profile-card">
-        <div class="background-block">
-          <img
-            src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-            alt="profile-sample1"
-            class="background"
-          />
-        </div>
-        <div class="profile-thumb-block">
-          <img
-            src="../src/assets/images/profile-picture.jpg"
-            alt="profile-image"
-            class="profile"
-          />
-        </div>
-        <div class="card-content">
-          <h2>Gerardo Ramirez<small>Frontend Developer</small></h2>
-          <div class="icon-block">
-            <a href="https://github.com/g3rardogo"
-              ><i class="fa fa-github"></i
-            ></a>
-            <a href="https://twitter.com/g3rardogo"
-              ><i class="fa fa-twitter"></i
-            ></a>
-            <a
-              href="https://linkedin.com/in/gerardo-javier-ramírez-gómez-aa06b2192"
-              ><i class="fa fa-linkedin"></i
-            ></a>
-            <a href="mailto:gerardogo145@gmail.com"
-              ><i class="fas fa-envelope"></i
-            ></a>
+    <div class="about-grid">
+      <section class="about__section" id="about">
+        <h2>NICE TO MEET YOU</h2>
+        <h1>Hey, I'm Gerardo, frontend developer and code lover</h1>
+        <p>
+          Hi, my name is Gerardo Ramirez and I'm a frontend developer from
+          Barcelona. I have over 5 years experience in software development.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit,
+          maiores facere temporibus quam pariatur sunt dolor quis explicabo amet
+          ipsam fugiat labore et obcaecati similique accusantium nam suscipit
+          minus laborum. Illo a corrupti quidem porro odio, facilis atque esse,
+          molestias, eos debitis doloremque inventore vero perspiciatis nisi
+          quisquam laboriosam non harum dicta eaque et repudiandae enim? Aperiam
+          fuga ut provident.
+        </p>
+      </section>
+      <section class="contact__section" id="contact">
+        <h2>CONTACT ME</h2>
+        <h1>Got a Project? Let's talk</h1>
+        <div class="card profile-card">
+          <div class="background-block">
+            <img
+              src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              alt="profile-sample1"
+              class="background"
+            />
+          </div>
+          <div class="profile-thumb-block">
+            <img
+              src="../src/assets/images/profile-picture.jpg"
+              alt="profile-image"
+              class="profile"
+            />
+          </div>
+          <div class="card-content">
+            <h2>Gerardo Ramírez<small>Frontend Developer</small></h2>
+            <div class="icon-block">
+              <a href="https://github.com/g3rardogo"
+                ><i class="fa fa-github"></i
+              ></a>
+              <a href="https://twitter.com/g3rardogo"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a
+                href="https://linkedin.com/in/gerardo-javier-ramírez-gómez-aa06b2192"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+              <a href="mailto:gerardogo145@gmail.com"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <footer>
       <div class="container">
         <h2>CONTACT ME</h2>
