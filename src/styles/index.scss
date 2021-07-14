@@ -64,8 +64,59 @@ a:hover {
   border-color: $primary-color;
 }
 
+@keyframes slideInRight {
+  from {
+    margin-left: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    margin-left: -100%;
+    width: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .background__container {
-  padding: 0 0;
   background-image: url("../assets/images/background.svg");
   background-repeat: no-repeat;
   background-size: 320px;
@@ -87,6 +138,7 @@ a:hover {
   }
   .header-grid {
     @include media(tablet) {
+      height: 100vh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -97,20 +149,27 @@ a:hover {
       padding: 0px $padding-desktop-xl;
     }
     header {
+      height: 100vh;
       padding: 52px $padding-default 0;
       max-width: 630px;
       p {
+        animation-duration: 1s;
+        animation-name: fadeUp;
         @include media(desktop-s) {
           margin-top: 24px;
         }
       }
       a {
+        animation-duration: 2s;
+        animation-name: fadeUp;
         @include media(desktop-s) {
           margin-top: 32px;
         }
       }
       h1 {
         font-size: 5.8rem;
+        animation-duration: 0.5s;
+        animation-name: fadeUp;
         @include media(tablet) {
           font-size: 7rem;
         }
@@ -121,9 +180,13 @@ a:hover {
     }
     .profile-picture__container {
       max-width: 464px;
-      padding: 46px $padding-default 0;
+      margin: 0 auto;
+      padding: 0 $padding-default;
+      animation-duration: 2s;
+      animation-name: slideInRight;
       @include media(desktop-m) {
         max-width: 500px;
+        max-height: 500px;
         display: flex;
         justify-self: right;
       }
@@ -144,12 +207,20 @@ a:hover {
   @include media(desktop-xl) {
     padding: 120px $padding-desktop-xl 0;
   }
+  h2 {
+    animation-duration: 3s;
+    animation-name: fadeUp;
+  }
   h1 {
     margin-bottom: 54px;
+    animation-duration: 3s;
+    animation-name: fadeUp;
   }
   .my-skills__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    animation-duration: 3s;
+    animation-name: fadeUp;
     @include media(tablet) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -231,6 +302,18 @@ a:hover {
     @include media(desktop-xl) {
       padding: 86px $padding-desktop-xl 0;
     }
+    h1 {
+      animation-duration: 2s;
+      animation-name: slideInLeft;
+    }
+    h2 {
+      animation-duration: 2s;
+      animation-name: slideInLeft;
+    }
+    .my-work__description {
+      animation-duration: 2s;
+      animation-name: slideInLeft;
+    }
   }
   .works__container {
     @media (min-width: 600px) {
@@ -252,6 +335,8 @@ a:hover {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  animation-duration: 2s;
+  animation-name: fadeDown;
   @media (min-width: 480px) {
     min-height: 400px;
   }
@@ -382,6 +467,18 @@ a:hover {
     @include media(desktop-xl) {
       padding: 86px 0;
     }
+    h2 {
+      animation-duration: 2s;
+      animation-name: fadeUp;
+    }
+    h1 {
+      animation-duration: 2s;
+      animation-name: fadeUp;
+    }
+    p {
+      animation-duration: 2s;
+      animation-name: fadeUp;
+    }
   }
   .contact__section {
     padding-top: 86px;
@@ -391,6 +488,14 @@ a:hover {
       margin-top: 86px;
       padding-top: 64px;
       text-align: right;
+    }
+    h1 {
+      animation-duration: 2s;
+      animation-name: fadeDown;
+    }
+    h2 {
+      animation-duration: 2s;
+      animation-name: fadeDown;
     }
     .profile-card {
       display: block;
