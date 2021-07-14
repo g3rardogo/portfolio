@@ -1,3 +1,4 @@
+import "./bootstrap/js/jquery-1.9.1.min";
 import "./bootstrap/scss/bootstrap.scss";
 import "./styles/index.scss";
 
