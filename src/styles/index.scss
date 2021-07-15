@@ -116,6 +116,31 @@ a:hover {
   }
 }
 
+.animate {
+  opacity: 0;
+  transform: all 0.5s;
+}
+
+.animate-right {
+  animation-duration: 2s;
+  animation-name: slideInRight;
+}
+
+.animate-left {
+  animation-duration: 2s;
+  animation-name: slideInLeft;
+}
+
+.animate-up {
+  animation-duration: 2s;
+  animation-name: fadeUp;
+}
+
+.animate-down {
+  animation-duration: 2s;
+  animation-name: fadeDown;
+}
+
 .background__container {
   background-image: url("../assets/images/background.svg");
   background-repeat: no-repeat;
@@ -152,24 +177,25 @@ a:hover {
       height: 100vh;
       padding: 52px $padding-default 0;
       max-width: 630px;
+      h1 {
+        animation-duration: 2s;
+        animation-name: fadeUp;
+      }
       p {
-        animation-duration: 1s;
+        animation-duration: 3s;
         animation-name: fadeUp;
         @include media(desktop-s) {
           margin-top: 24px;
         }
       }
       a {
-        animation-duration: 2s;
+        animation-duration: 3.5s;
         animation-name: fadeUp;
         @include media(desktop-s) {
           margin-top: 32px;
         }
       }
       h1 {
-        font-size: 5.8rem;
-        animation-duration: 0.5s;
-        animation-name: fadeUp;
         @include media(tablet) {
           font-size: 7rem;
         }
@@ -182,8 +208,10 @@ a:hover {
       max-width: 464px;
       margin: 0 auto;
       padding: 0 $padding-default;
-      animation-duration: 2s;
-      animation-name: slideInRight;
+      @include media(tablet) {
+        animation-duration: 2.5s;
+        animation-name: fadeDown;
+      }
       @include media(desktop-m) {
         max-width: 500px;
         max-height: 500px;
@@ -207,20 +235,12 @@ a:hover {
   @include media(desktop-xl) {
     padding: 120px $padding-desktop-xl 0;
   }
-  h2 {
-    animation-duration: 3s;
-    animation-name: fadeUp;
-  }
   h1 {
     margin-bottom: 54px;
-    animation-duration: 3s;
-    animation-name: fadeUp;
   }
   .my-skills__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    animation-duration: 3s;
-    animation-name: fadeUp;
     @include media(tablet) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -313,18 +333,6 @@ a:hover {
     }
     @include media(desktop-xl) {
       padding: 86px $padding-desktop-xl 0;
-    }
-    h1 {
-      animation-duration: 2s;
-      animation-name: slideInLeft;
-    }
-    h2 {
-      animation-duration: 2s;
-      animation-name: slideInLeft;
-    }
-    .my-work__description {
-      animation-duration: 2s;
-      animation-name: slideInLeft;
     }
   }
   .works__container {

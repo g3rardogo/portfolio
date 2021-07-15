@@ -19,3 +19,26 @@ $(document).ready(function () {
     }
   });
 });
+
+const animateUp = document.querySelectorAll(".animate-to-up");
+const animateDown = document.querySelectorAll(".animate-to-down");
+const animateLeft = document.querySelectorAll(".animate-to-left");
+const animateRight = document.querySelectorAll(".animate-to-right");
+
+function showScroll(elements, animation) {
+  const scrollTop = document.documentElement.scrollTop;
+  for (var i = 0; i < elements.length; i++) {
+    const altura = elements[i].offsetTop;
+    if (altura - 800 < scrollTop) {
+      elements[i].style.opacity = 1;
+      elements[i].classList.add(animation);
+    }
+  }
+}
+
+window.addEventListener("scroll", () => {
+  showScroll(animateUp, "animate-up");
+  showScroll(animateDown, "animate-down");
+  showScroll(animateLeft, "animate-left");
+  showScroll(animateRight, "animate-right");
+});
