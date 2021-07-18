@@ -20,25 +20,33 @@ $(document).ready(function () {
   });
 });
 
-const animateUp = document.querySelectorAll(".animate-to-up");
-const animateDown = document.querySelectorAll(".animate-to-down");
-const animateLeft = document.querySelectorAll(".animate-to-left");
-const animateRight = document.querySelectorAll(".animate-to-right");
+const animateUp = [...document.querySelectorAll(".animate-to-up")];
+const animateDown = [...document.querySelectorAll(".animate-to-down")];
+const animateLeft = [...document.querySelectorAll(".animate-to-left")];
 
-function showScroll(elements, animation) {
-  const scrollTop = document.documentElement.scrollTop;
-  for (var i = 0; i < elements.length; i++) {
-    const altura = elements[i].offsetTop;
-    if (altura - 800 < scrollTop) {
-      elements[i].style.opacity = 1;
-      elements[i].classList.add(animation);
-    }
-  }
-}
+const animate = (elements, animationName) => {
+  const options = {
+    rootMargin: "0px",
+    threshold: 0.2,
+  };
 
-window.addEventListener("scroll", () => {
-  showScroll(animateUp, "animate-up");
-  showScroll(animateDown, "animate-down");
-  showScroll(animateLeft, "animate-left");
-  showScroll(animateRight, "animate-right");
-});
+  const setItemAnimation = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(animationName);
+        entry.target.classList.remove("animate");
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(setItemAnimation, options);
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+};
+
+animate(animateUp, "animate-up");
+animate(animateDown, "animate-down");
+animate(animateLeft, "animate-left");

@@ -179,18 +179,15 @@ a:hover {
       max-width: 630px;
       h1 {
         animation-duration: 2s;
-        animation-name: fadeUp;
       }
       p {
         animation-duration: 3s;
-        animation-name: fadeUp;
         @include media(desktop-s) {
           margin-top: 24px;
         }
       }
       a {
         animation-duration: 3.5s;
-        animation-name: fadeUp;
         @include media(desktop-s) {
           margin-top: 32px;
         }
@@ -210,7 +207,6 @@ a:hover {
       padding: 0 $padding-default;
       @include media(tablet) {
         animation-duration: 2.5s;
-        animation-name: fadeDown;
       }
       @include media(desktop-m) {
         max-width: 500px;
