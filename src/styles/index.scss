@@ -161,28 +161,29 @@ a:hover {
     }
   }
   .header-grid {
+    padding-top: 32px;
     @include media(tablet) {
       height: 100vh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
     @include media(desktop-m) {
-      padding: 0 $padding-desktop-m;
+      padding: 32px $padding-desktop-m;
     }
     @include media(desktop-xl) {
-      padding: 0px $padding-desktop-xl;
+      padding: 32px $padding-desktop-xl;
     }
     header {
       display: flex;
       flex-direction: column;
       height: 100vh;
-      padding: 52px $padding-default 64px;
+      padding: 0px $padding-default;
       max-width: 630px;
       @include media(desktop-m) {
-        padding: 52px $padding-default 80px;
+        padding: 0px $padding-default;
       }
       @include media(desktop-l) {
-        padding: 52px $padding-default 98px;
+        padding: 0px $padding-default;
       }
       p {
         margin-top: 26px;
@@ -221,6 +222,8 @@ a:hover {
       }
       .mouse__container {
         display: flex;
+        position: absolute;
+        top: 90%;
         align-items: center;
         margin-top: auto;
         div {
@@ -469,8 +472,6 @@ a:hover {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  animation-duration: 2s;
-  animation-name: fadeDown;
   @media (min-width: 480px) {
     min-height: 400px;
   }
