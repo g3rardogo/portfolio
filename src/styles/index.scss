@@ -118,7 +118,6 @@ a:hover {
 
 .animate {
   opacity: 0;
-  transform: all 0.5s;
 }
 
 .animate-right {
@@ -174,31 +173,150 @@ a:hover {
       padding: 0px $padding-desktop-xl;
     }
     header {
+      display: flex;
+      flex-direction: column;
       height: 100vh;
-      padding: 52px $padding-default 0;
+      padding: 52px $padding-default 64px;
       max-width: 630px;
-      h1 {
-        animation-duration: 2s;
+      @include media(desktop-m) {
+        padding: 52px $padding-default 80px;
+      }
+      @include media(desktop-l) {
+        padding: 52px $padding-default 98px;
       }
       p {
-        animation-duration: 3s;
+        margin-top: 26px;
         @include media(desktop-s) {
           margin-top: 24px;
         }
       }
       a {
-        animation-duration: 3.5s;
-        @include media(desktop-s) {
-          margin-top: 32px;
+        width: fit-content;
+        margin-top: 46px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .invitation__container {
+        display: flex;
+        align-items: center;
+        img {
+          width: 25px;
+          height: 25px;
+          margin-right: 8px;
+        }
+        p {
+          margin: 0;
+          display: inline-block;
         }
       }
       h1 {
+        font-size: 5.8rem;
         @include media(tablet) {
           font-size: 7rem;
         }
       }
       p {
-        color: $primary-color;
+        color: $secondary-color;
+      }
+      .mouse__container {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        div {
+          display: flex;
+          flex-direction: column;
+          .arrow {
+            display: block;
+            transform: rotate(45deg);
+            border-right: 1px solid $subtitle-color;
+            border-bottom: 1px solid $subtitle-color;
+            margin: 5px 0 8px 8px;
+            width: 10px;
+            height: 10px;
+            animation: mouse-scroll 0.5s infinite;
+          }
+
+          .mouse {
+            height: 42px;
+            width: 24px;
+            border-radius: 14px;
+            transform: none;
+            border: 2px solid $subtitle-color;
+            margin-bottom: 6px;
+          }
+
+          .wheel {
+            height: 5px;
+            width: 2px;
+            display: block;
+            margin: 5px auto;
+            background: $subtitle-color;
+            position: relative;
+            height: 4px;
+            width: 4px;
+            border: 2px solid $subtitle-color;
+            border-radius: 8px;
+          }
+
+          .wheel {
+            animation: mouse-wheel 1s linear infinite;
+          }
+
+          @keyframes mouse-wheel {
+            0% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            100% {
+              opacity: 0;
+              -webkit-transform: translateY(20px);
+            }
+          }
+
+          @-moz-keyframes mouse-wheel {
+            0% {
+              top: 1px;
+            }
+            25% {
+              top: 2px;
+            }
+            50% {
+              top: 6px;
+            }
+            75% {
+              top: 2px;
+            }
+            100% {
+              top: 1px;
+            }
+          }
+
+          @keyframes mouse-scroll {
+            0% {
+              opacity: 0;
+            }
+            25% {
+              opacity: 0.25;
+            }
+            50% {
+              opacity: 0.5;
+            }
+            75% {
+              opacity: 0.75;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        }
+        p {
+          display: inline-block;
+          margin: 0;
+          margin-bottom: 24px;
+          margin-left: 12px;
+          color: $subtitle-color;
+        }
       }
     }
     .profile-picture__container {
