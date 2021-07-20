@@ -57,6 +57,10 @@ a:hover {
   text-decoration: none;
 }
 
+button:focus {
+  outline: none;
+}
+
 .btn-primary:not(:disabled):not(.disabled).active {
   padding: 19px 32px;
   border-radius: 12px;
@@ -154,10 +158,21 @@ a:hover {
     @include media(desktop-xl) {
       padding: 24px $padding-desktop-xl 0;
     }
-    a {
+    .nav-link {
+      color: $primary-color;
       @include media(desktop-s) {
         margin-right: 24px;
       }
+    }
+  }
+  .navbar-toggler {
+    background-color: #ffffff;
+    border-color: $accent-color;
+    padding: 10px 12px;
+    font-size: 1.8rem;
+    border-radius: 12px;
+    .navbar-toggler-icon {
+      background-image: url("../assets/images/navbar-toggler-icon.svg");
     }
   }
   .header-grid {
@@ -180,10 +195,7 @@ a:hover {
       padding: 0px $padding-default;
       max-width: 630px;
       @include media(desktop-m) {
-        padding: 0px $padding-default;
-      }
-      @include media(desktop-l) {
-        padding: 0px $padding-default;
+        padding: 0px;
       }
       p {
         margin-top: 26px;
