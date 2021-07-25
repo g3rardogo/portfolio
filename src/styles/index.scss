@@ -167,11 +167,11 @@ button:focus {
     }
   }
   .navbar-toggler {
-    background-color: #ffffff;
-    border-color: $accent-color;
     padding: 10px 12px;
     font-size: 1.8rem;
     border-radius: 12px;
+    background-color: #ffffff;
+    border-color: $accent-color;
     .navbar-toggler-icon {
       background-image: url("../assets/images/navbar-toggler-icon.svg");
     }
@@ -179,9 +179,9 @@ button:focus {
   .header-grid {
     padding-top: 32px;
     @include media(tablet) {
-      height: 100vh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      height: 100vh;
     }
     @include media(desktop-m) {
       padding: 64px $padding-desktop-m;
@@ -193,33 +193,32 @@ button:focus {
       display: flex;
       flex-direction: column;
       height: 100vh;
-      padding: 0px $padding-default;
       max-width: 630px;
+      padding: 0px $padding-default;
       @include media(desktop-m) {
         padding: 0px;
       }
       p {
         margin-top: 26px;
+        color: $secondary-color;
         @include media(desktop-s) {
           margin-top: 24px;
         }
       }
-      a {
-        width: fit-content;
-        margin-top: 34px;
-        text-align: center;
-        margin-bottom: 20px;
+      h1 {
+        font-size: 5.8rem;
+        @include media(tablet) {
+          font-size: 7rem;
+        }
       }
-
       .icons__container {
         display: flex;
         i {
-          margin-right: 12px;
+          margin: 24px 16px 14px 0px;
           font-size: 3.5rem;
           color: $primary-color;
         }
       }
-
       .invitation__container {
         display: flex;
         align-items: center;
@@ -229,18 +228,9 @@ button:focus {
           margin-right: 8px;
         }
         p {
-          margin: 0;
           display: inline-block;
+          margin: 0;
         }
-      }
-      h1 {
-        font-size: 5.8rem;
-        @include media(tablet) {
-          font-size: 7rem;
-        }
-      }
-      p {
-        color: $secondary-color;
       }
       .mouse__container {
         display: flex;
@@ -251,43 +241,35 @@ button:focus {
         div {
           display: flex;
           flex-direction: column;
-          .arrow {
-            display: block;
-            transform: rotate(45deg);
-            border-right: 1px solid $subtitle-color;
-            border-bottom: 1px solid $subtitle-color;
-            margin: 5px 0 8px 8px;
-            width: 10px;
-            height: 10px;
-            animation: mouse-scroll 0.5s infinite;
-          }
-
           .mouse {
             height: 42px;
             width: 24px;
-            border-radius: 14px;
-            transform: none;
-            border: 2px solid $subtitle-color;
             margin-bottom: 6px;
-          }
-
-          .wheel {
-            height: 5px;
-            width: 2px;
-            display: block;
-            margin: 5px auto;
-            background: $subtitle-color;
-            position: relative;
-            height: 4px;
-            width: 4px;
+            transform: none;
+            border-radius: 14px;
             border: 2px solid $subtitle-color;
-            border-radius: 8px;
+            .wheel {
+              display: block;
+              position: relative;
+              width: 4px;
+              height: 4px;
+              margin: 5px auto;
+              border-radius: 8px;
+              animation: mouse-wheel 1s linear infinite;
+              background: $subtitle-color;
+              border: 2px solid $subtitle-color;
+            }
           }
-
-          .wheel {
-            animation: mouse-wheel 1s linear infinite;
+          .arrow {
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: 5px 0 8px 8px;
+            transform: rotate(45deg);
+            animation: mouse-scroll 0.5s infinite;
+            border-right: 1px solid $subtitle-color;
+            border-bottom: 1px solid $subtitle-color;
           }
-
           @keyframes mouse-wheel {
             0% {
               opacity: 1;
@@ -298,25 +280,6 @@ button:focus {
               -webkit-transform: translateY(20px);
             }
           }
-
-          @-moz-keyframes mouse-wheel {
-            0% {
-              top: 1px;
-            }
-            25% {
-              top: 2px;
-            }
-            50% {
-              top: 6px;
-            }
-            75% {
-              top: 2px;
-            }
-            100% {
-              top: 1px;
-            }
-          }
-
           @keyframes mouse-scroll {
             0% {
               opacity: 0;
@@ -337,9 +300,7 @@ button:focus {
         }
         p {
           display: inline-block;
-          margin: 0;
-          margin-bottom: 24px;
-          margin-left: 12px;
+          margin: 0px 0px 24px 12px;
           color: $subtitle-color;
         }
       }
@@ -349,12 +310,12 @@ button:focus {
       margin: 0 auto;
       padding: 0 $padding-default;
       @include media(desktop-m) {
-        margin: 0;
-        padding: 0;
-        max-width: 500px;
-        max-height: 500px;
         display: flex;
         justify-self: right;
+        max-width: 500px;
+        max-height: 500px;
+        margin: 0;
+        padding: 0;
       }
       img {
         width: 100%;
@@ -365,8 +326,8 @@ button:focus {
 }
 
 .my-skills__section {
-  padding: 86px $padding-default 0;
   text-align: center;
+  padding: 86px $padding-default 0;
   @include media(desktop-m) {
     padding: 120px $padding-desktop-m 0;
   }
@@ -383,10 +344,10 @@ button:focus {
       grid-template-columns: repeat(4, 1fr);
     }
     .my-skill__card {
-      margin: 0 12px 36px 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 0 12px 36px 12px;
       .icon {
         display: flex;
         align-items: center;
@@ -447,10 +408,6 @@ button:focus {
         background-color: #40dbe642;
       }
 
-      .vscode-icon {
-        background-color: #0d7abc4a;
-      }
-
       .jest-icon {
         background-color: #f4dbd3;
       }
@@ -461,10 +418,10 @@ button:focus {
 .background__container--square {
   padding: 0 0 42px 0;
   background-image: url("../assets/images/background-2.svg");
-  background-repeat: no-repeat;
   background-size: 100%;
   background-position-x: -25vw;
   background-position-y: 70px;
+  background-repeat: no-repeat;
   @include media(tablet) {
     background-position-y: 40px;
   }
@@ -472,7 +429,6 @@ button:focus {
     background-position-x: -15vw;
     background-size: 80%;
   }
-
   .my-work__section {
     padding: 86px $padding-default 0;
     @include media(desktop-m) {
@@ -491,95 +447,83 @@ button:focus {
     @include media(desktop-s) {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
-}
-
-.card {
-  min-height: 340px;
-  margin-top: 24px;
-  border: none;
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  @media (min-width: 480px) {
-    min-height: 400px;
-  }
-
-  @media (min-width: 600px) {
-    min-height: 325px;
-  }
-
-  &.card-has-bg {
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: inherit;
-      -webkit-filter: grayscale(1);
-      -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-      filter: grayscale(100%);
-    }
-
-    &:hover {
-      transform: scale(0.98);
-      box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
-      background-size: 130%;
+    .card {
+      min-height: 340px;
+      margin-top: 24px;
+      border: none;
       transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+      @media (min-width: 480px) {
+        min-height: 400px;
+      }
+      @media (min-width: 600px) {
+        min-height: 325px;
+      }
+      &.card-has-bg {
+        transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: inherit;
+          filter: grayscale(100%);
+        }
+        &:hover {
+          transform: scale(0.98);
+          transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+          box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+          background-size: 130%;
+          .card-img-overlay {
+            transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+            background: rgb(35, 79, 109);
+            background: linear-gradient(
+              0deg,
+              rgba(4, 69, 114, 0.5) 0%,
+              rgba(4, 69, 114, 1) 100%
+            );
+          }
+        }
+      }
+      .card-footer {
+        background: none;
+        border-top: none;
+        .media {
+          img {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: solid 3px $primary-color;
+          }
+        }
+      }
+      .card-body {
+        transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      &:hover {
+        .card-body {
+          margin-top: 30px;
+          transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
       .card-img-overlay {
         transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
         background: rgb(35, 79, 109);
         background: linear-gradient(
           0deg,
-          rgba(4, 69, 114, 0.5) 0%,
-          rgba(4, 69, 114, 1) 100%
+          rgba(35, 79, 109, 0.3785889355742297) 0%,
+          rgba(69, 95, 113, 1) 100%
         );
       }
     }
-  }
-  .card-footer {
-    background: none;
-    border-top: none;
-    .media {
-      img {
-        width: 50px;
-        height: 50px;
-        border: solid 3px $primary-color;
-        background-color: white;
-      }
-    }
-  }
-  .card-meta {
-    color: orange;
-  }
-  .card-body {
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  &:hover {
-    .card-body {
-      margin-top: 30px;
-      transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    }
-    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  .card-img-overlay {
-    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    background: rgb(35, 79, 109);
-    background: linear-gradient(
-      0deg,
-      rgba(35, 79, 109, 0.3785889355742297) 0%,
-      rgba(69, 95, 113, 1) 100%
-    );
   }
 }
 
@@ -603,171 +547,12 @@ button:focus {
   background-image: url("../assets/images/project-5.png");
 }
 
-.about-grid {
-  padding: 0 $padding-default;
-  @include media(tablet) {
-    padding: 0 $padding-tablet;
-  }
-  @include media(desktop-s) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include media(desktop-m) {
-    padding: 0 $padding-desktop-m;
-  }
-  @include media(desktop-xl) {
-    padding: 0 $padding-desktop-xl;
-  }
-  .about__section {
-    margin-top: 86px;
-    padding-top: 64px;
-    padding-bottom: 64px;
-    @include media(desktop-s) {
-      border-top-right-radius: 50px;
-      border-bottom-right-radius: 50px;
-    }
-    @include media(desktop-m) {
-      padding: 86px 0;
-    }
-    @include media(desktop-xl) {
-      padding: 86px 0;
-    }
-    h2 {
-      animation-duration: 2s;
-      animation-name: fadeUp;
-    }
-    h1 {
-      animation-duration: 2s;
-      animation-name: fadeUp;
-    }
-    p {
-      animation-duration: 2s;
-      animation-name: fadeUp;
-    }
-  }
-  .contact__section {
-    padding-top: 86px;
-    padding-bottom: 86px;
-    text-align: center;
-    @include media(desktop-s) {
-      margin-top: 86px;
-      padding-top: 86px;
-      text-align: right;
-    }
-    h1 {
-      animation-duration: 2s;
-      animation-name: fadeDown;
-    }
-    h2 {
-      animation-duration: 2s;
-      animation-name: fadeDown;
-    }
-    .profile-card {
-      display: block;
-      width: 100%;
-      max-width: 340px;
-      height: 400px;
-      overflow: hidden;
-      margin: 46px auto 0;
-      text-align: center;
-      border: none;
-      @include media(desktop-s) {
-        margin: 46px 0 0 auto;
-      }
-      .background-block {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-        float: left;
-        .background {
-          width: 100%;
-          vertical-align: top;
-          opacity: 0.9;
-          -webkit-filter: blur(0.5px);
-          filter: blur(0.5px);
-          -webkit-transform: scale(1.8);
-          transform: scale(2.8);
-        }
-      }
-      .card-content {
-        position: relative;
-        width: 100%;
-        height: 50%;
-        padding: 15px 25px;
-        float: left;
-        color: #232323;
-        background: #efefef;
-        border-radius: 0 0 5px 5px;
-        z-index: 1;
-      }
-      .card-content::before {
-        content: "";
-        position: absolute;
-        width: 120%;
-        height: 100%;
-        left: 11px;
-        bottom: 51px;
-        background: #efefef;
-        transform: rotate(-13deg);
-        z-index: -1;
-      }
-      .profile {
-        border-radius: 50%;
-        position: absolute;
-        bottom: 50%;
-        left: 50%;
-        max-width: 100px;
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-        border: 2px solid rgba(255, 255, 255, 1);
-        -webkit-transform: translate(-50%, 0%);
-        transform: translate(-50%, 0%);
-        z-index: 2;
-      }
-      h2 {
-        margin: 14px 0 5px 0;
-        font-weight: 600;
-        font-size: 2.5rem;
-        small {
-          display: block;
-          font-size: 1.5rem;
-          margin-top: 10px;
-        }
-      }
-      .icon-block {
-        float: left;
-        width: 100%;
-        margin-top: 24px;
-        a {
-          text-decoration: none;
-        }
-      }
-      i {
-        display: inline-block;
-        font-size: 1.6rem;
-        color: $primary-color;
-        text-align: center;
-        border: 1px solid $primary-color;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        border-radius: 50%;
-        margin: 0 5px;
-      }
-      i:hover {
-        background-color: $primary-color;
-        color: #fff;
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 footer {
-  margin-top: 86px;
+  margin-top: 100px;
   background-color: #e9f9ff;
   .container {
-    padding: 88px $padding-default 0;
     text-align: center;
+    padding: 88px $padding-default 0;
     h1 {
       font-size: 3.8rem;
     }
