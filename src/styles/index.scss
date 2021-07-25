@@ -66,6 +66,7 @@ button:focus {
   border-radius: 12px;
   background-color: $primary-color;
   border-color: $primary-color;
+  cursor: auto;
 }
 
 @keyframes slideInRight {
@@ -183,10 +184,10 @@ button:focus {
       grid-template-columns: repeat(2, 1fr);
     }
     @include media(desktop-m) {
-      padding: 32px $padding-desktop-m;
+      padding: 64px $padding-desktop-m;
     }
     @include media(desktop-xl) {
-      padding: 32px $padding-desktop-xl;
+      padding: 84px $padding-desktop-xl;
     }
     header {
       display: flex;
@@ -205,9 +206,18 @@ button:focus {
       }
       a {
         width: fit-content;
-        margin-top: 46px;
+        margin-top: 34px;
         text-align: center;
         margin-bottom: 20px;
+      }
+
+      .icons__container {
+        display: flex;
+        i {
+          margin-right: 12px;
+          font-size: 3.5rem;
+          color: $primary-color;
+        }
       }
 
       .invitation__container {
@@ -338,10 +348,9 @@ button:focus {
       max-width: 464px;
       margin: 0 auto;
       padding: 0 $padding-default;
-      @include media(tablet) {
-        animation-duration: 2.5s;
-      }
       @include media(desktop-m) {
+        margin: 0;
+        padding: 0;
         max-width: 500px;
         max-height: 500px;
         display: flex;
@@ -410,6 +419,10 @@ button:focus {
         background-color: #d3f1fd;
       }
 
+      .redux-icon {
+        background-color: #ba9cf285;
+      }
+
       .sass-icon {
         background-color: #f4ddf8;
       }
@@ -455,6 +468,11 @@ button:focus {
   @include media(tablet) {
     background-position-y: 40px;
   }
+  @include media(desktop-m) {
+    background-position-x: -15vw;
+    background-size: 80%;
+  }
+
   .my-work__section {
     padding: 86px $padding-default 0;
     @include media(desktop-m) {
@@ -633,7 +651,7 @@ button:focus {
     text-align: center;
     @include media(desktop-s) {
       margin-top: 86px;
-      padding-top: 64px;
+      padding-top: 86px;
       text-align: right;
     }
     h1 {
