@@ -307,7 +307,7 @@ button:focus {
     }
     .profile-picture__container {
       max-width: 464px;
-      margin: 0 auto;
+      margin: 0 auto 64px;
       padding: 0 $padding-default;
       @include media(desktop-m) {
         display: flex;
@@ -327,6 +327,7 @@ button:focus {
 
 .my-skills__section {
   text-align: center;
+  margin-bottom: 120px;
   padding: 86px $padding-default 0;
   @include media(desktop-m) {
     padding: 120px $padding-desktop-m 0;
@@ -548,7 +549,7 @@ button:focus {
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 120px;
   background-color: #e9f9ff;
   .container {
     text-align: center;
