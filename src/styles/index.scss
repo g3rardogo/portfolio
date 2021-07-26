@@ -177,10 +177,12 @@ button:focus {
     }
   }
   .header-grid {
-    padding-top: 32px;
     @include media(tablet) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      height: auto;
+    }
+    @include media(desktop-s) {
       height: 100vh;
     }
     @include media(desktop-m) {
@@ -195,11 +197,17 @@ button:focus {
       height: 100vh;
       max-width: 630px;
       padding: 0px $padding-default;
+      @include media(tablet) {
+        height: auto;
+      }
+      @include media(desktop-s) {
+        height: 100vh;
+      }
       @include media(desktop-m) {
         padding: 0px;
       }
       p {
-        margin-top: 26px;
+        margin-top: 14px;
         color: $secondary-color;
         @include media(desktop-s) {
           margin-top: 24px;
@@ -234,10 +242,8 @@ button:focus {
       }
       .mouse__container {
         display: flex;
-        position: absolute;
-        top: 90%;
         align-items: center;
-        margin-top: auto;
+        margin-top: 20%;
         div {
           display: flex;
           flex-direction: column;
@@ -307,7 +313,7 @@ button:focus {
     }
     .profile-picture__container {
       max-width: 464px;
-      margin: 0 auto 64px;
+      margin: 64px auto 64px;
       padding: 0 $padding-default;
       @include media(desktop-m) {
         display: flex;
