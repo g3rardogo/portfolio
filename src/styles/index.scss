@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600;700&display=swap");
 @import "../bootstrap/scss/breakpoints.scss";
+@import "./animations.scss";
 
 $primary-color: #130f49;
 $secondary-color: #55527c;
@@ -69,82 +70,6 @@ button:focus {
   cursor: auto;
 }
 
-@keyframes slideInRight {
-  from {
-    margin-left: 100%;
-    width: 100%;
-    opacity: 0;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    margin-left: -100%;
-    width: 100%;
-    opacity: 0;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-.animate {
-  opacity: 0;
-}
-
-.animate-right {
-  animation-duration: 2s;
-  animation-name: slideInRight;
-}
-
-.animate-left {
-  animation-duration: 2s;
-  animation-name: slideInLeft;
-}
-
-.animate-up {
-  animation-duration: 2s;
-  animation-name: fadeUp;
-}
-
-.animate-down {
-  animation-duration: 2s;
-  animation-name: fadeDown;
-}
-
 .background__container {
   background-image: url("../assets/images/background.svg");
   background-repeat: no-repeat;
@@ -153,6 +78,9 @@ button:focus {
   background-position-y: -10px;
   .navbar {
     padding: 12px $padding-default;
+    @include media(tablet) {
+      padding: 12px $padding-tablet;
+    }
     @include media(desktop-m) {
       padding: 24px $padding-desktop-m 0;
     }
@@ -177,31 +105,28 @@ button:focus {
     }
   }
   .header-grid {
+    padding: 0px $padding-default;
     @include media(tablet) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      height: auto;
-    }
-    @include media(desktop-s) {
-      height: 100vh;
+      padding: 36px $padding-tablet 0;
+      height: 100%;
+      margin-bottom: 64px;
     }
     @include media(desktop-m) {
-      padding: 64px $padding-desktop-m;
+      padding: 64px $padding-desktop-m 0;
     }
     @include media(desktop-xl) {
-      padding: 84px $padding-desktop-xl;
+      padding: 84px $padding-desktop-xl 0;
     }
     header {
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      height: 100%;
       max-width: 630px;
-      padding: 0px $padding-default;
+      margin-bottom: 64px;
       @include media(tablet) {
-        height: auto;
-      }
-      @include media(desktop-s) {
-        height: 100vh;
+        margin-bottom: 0px;
       }
       @include media(desktop-m) {
         padding: 0px;
@@ -276,33 +201,6 @@ button:focus {
             border-right: 1px solid $subtitle-color;
             border-bottom: 1px solid $subtitle-color;
           }
-          @keyframes mouse-wheel {
-            0% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-            100% {
-              opacity: 0;
-              -webkit-transform: translateY(20px);
-            }
-          }
-          @keyframes mouse-scroll {
-            0% {
-              opacity: 0;
-            }
-            25% {
-              opacity: 0.25;
-            }
-            50% {
-              opacity: 0.5;
-            }
-            75% {
-              opacity: 0.75;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
         }
         p {
           display: inline-block;
@@ -314,7 +212,9 @@ button:focus {
     .profile-picture__container {
       max-width: 464px;
       margin: 64px auto 64px;
-      padding: 0 $padding-default;
+      @include media(tablet) {
+        margin: 0 auto;
+      }
       @include media(desktop-m) {
         display: flex;
         justify-self: right;
@@ -333,13 +233,16 @@ button:focus {
 
 .my-skills__section {
   text-align: center;
-  margin-bottom: 120px;
+  margin-bottom: 64px;
   padding: 86px $padding-default 0;
+  @include media(tablet) {
+    padding: 0px $padding-tablet;
+  }
   @include media(desktop-m) {
-    padding: 120px $padding-desktop-m 0;
+    padding: 0px $padding-desktop-m;
   }
   @include media(desktop-xl) {
-    padding: 120px $padding-desktop-xl 0;
+    padding: 0px $padding-desktop-xl;
   }
   h1 {
     margin-bottom: 54px;
@@ -438,6 +341,9 @@ button:focus {
   }
   .my-work__section {
     padding: 86px $padding-default 0;
+    @include media(tablet) {
+      padding: 86px $padding-tablet 0;
+    }
     @include media(desktop-m) {
       padding: 86px $padding-desktop-m 0;
     }
