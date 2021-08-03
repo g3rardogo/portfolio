@@ -1,23 +1,6 @@
+import "./bootstrap/js/jquery-3.2.1.slim.min";
 import "./bootstrap/scss/bootstrap.scss";
 import "./styles/index.scss";
-
-$(document).ready(function () {
-  $("a").on("click", function (event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $("html, body").animate(
-        {
-          scrollTop: $(hash).offset().top,
-        },
-        1200,
-        function () {
-          window.location.hash = hash;
-        }
-      );
-    }
-  });
-});
 
 const animateUp = [...document.querySelectorAll(".animate-to-up")];
 const animateDown = [...document.querySelectorAll(".animate-to-down")];
@@ -26,7 +9,7 @@ const animateLeft = [...document.querySelectorAll(".animate-to-left")];
 const animate = (elements, animationName) => {
   const options = {
     rootMargin: "0px",
-    threshold: 0.2,
+    threshold: 0.1,
   };
 
   const setItemAnimation = (entries) => {

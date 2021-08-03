@@ -14,6 +14,7 @@ $padding-desktop-xl: 20%;
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -466,6 +467,34 @@ button:focus {
 
 .batatabit-card {
   background-image: url("../assets/images/project-5.png");
+}
+
+.awards__section {
+  text-align: center;
+  padding: 86px $padding-default 0;
+  @include media(tablet) {
+    padding: 86px $padding-tablet 0;
+  }
+  @include media(desktop-m) {
+    padding: 86px $padding-desktop-m 0;
+  }
+  @include media(desktop-xl) {
+    padding: 86px $padding-desktop-xl 0;
+  }
+  div {
+    margin-top: 46px;
+    @include media(tablet) {
+      display: flex;
+      justify-content: space-around;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 24px;
+      @include media(tablet) {
+        width: 45%;
+      }
+    }
+  }
 }
 
 footer {
