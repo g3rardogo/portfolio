@@ -113,6 +113,10 @@ button:focus {
       height: 100%;
       margin-bottom: 64px;
     }
+    @include media(desktop-s) {
+      height: 100vh;
+      margin-bottom: 0px;
+    }
     @include media(desktop-m) {
       padding: 64px $padding-desktop-m 0;
     }
