@@ -56,7 +56,10 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
     }),
-
+    new HtmlWebpackPlugin({
+      template: "./public/en.html",
+      filename: "./en.html",
+    }),
     new MiniCssExtractPlugin({
       filename: "main.css",
     }),
@@ -67,6 +70,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
+    historyApiFallback: true,
     compress: true,
     port: 3006,
   },
