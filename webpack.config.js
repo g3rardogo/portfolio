@@ -9,7 +9,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[contenthash].js",
+    filename: "build.js",
     publicPath: "/",
   },
   resolve: {
@@ -58,13 +58,12 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: "main.css",
     }),
-    new CleanWebpackPlugin(),
   ],
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerWebpackPlugin(), new TerserPlugin()],
+    minimizer: [new CssMinimizerWebpackPlugin()],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
