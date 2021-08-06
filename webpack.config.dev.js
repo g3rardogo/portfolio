@@ -1,9 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -12,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "build.js",
   },
+  mode: "development",
   resolve: {
     extensions: [".js"],
   },
@@ -71,12 +69,7 @@ module.exports = {
         },
       ],
     }),
-    new CleanWebpackPlugin(),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [new CssMinimizerWebpackPlugin()],
-  },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,

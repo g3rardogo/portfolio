@@ -1,5 +1,3 @@
-import "./bootstrap/js/jquery-3.2.1.slim.min";
-import "./bootstrap/scss/bootstrap.scss";
 import "./styles/index.scss";
 
 const animateUp = [...document.querySelectorAll(".animate-to-up")];
