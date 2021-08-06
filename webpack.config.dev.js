@@ -37,16 +37,18 @@ module.exports = {
       },
       {
         test: /\.(svg|jpg|png)$/,
-        type: "assets/resource",
+        type: "asset/resource",
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: true,
       template: "./public/index.html",
       filename: "./index.html",
     }),
     new HtmlWebpackPlugin({
+      inject: true,
       template: "./public/en.html",
       filename: "./en.html",
     }),
