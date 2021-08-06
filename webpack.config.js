@@ -11,6 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "build.js",
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   resolve: {
     extensions: [".js"],
@@ -38,7 +39,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(svg|jpg|png)/,
+        test: /\.(svg|jpg|png)$/,
         type: "asset/resource",
       },
     ],
@@ -68,6 +69,10 @@ module.exports = {
         {
           from: "node_modules/jquery/dist/jquery.min.js",
           to: "libs/jquery.min.js",
+        },
+        {
+          from: "src/assets/images",
+          to: "images",
         },
       ],
     }),

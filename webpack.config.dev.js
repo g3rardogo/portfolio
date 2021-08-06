@@ -36,8 +36,8 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(svg|jpg|png)/,
-        type: "asset/resource",
+        test: /\.(svg|jpg|png)$/,
+        type: "assets/resource",
       },
     ],
   },
@@ -66,6 +66,10 @@ module.exports = {
         {
           from: "node_modules/jquery/dist/jquery.min.js",
           to: "libs/jquery.min.js",
+        },
+        {
+          from: "src/assets/images",
+          to: "images",
         },
       ],
     }),
